@@ -4,6 +4,7 @@
   <a href="https://github.com/ishandutta2007/Awesome-Multi-Tenant-Cost-Profiling-Allocation/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Multi-Tenant-Cost-Profiling-Allocation?style=flat-square&logo=github&color=gold" alt="GitHub Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Multi-Tenant-Cost-Profiling-Allocation/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Multi-Tenant-Cost-Profiling-Allocation?style=flat-square&color=blue" alt="License"/></a>
   <img src="https://img.shields.io/badge/Last%20Updated-October%202026-brightgreen?style=flat-square" alt="Last Updated"/>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow"/></a>
 </p>
 
 <p align="center">
@@ -30,7 +31,9 @@ This repository provides an authoritative guide comparing **commercial SaaS FinO
 - [🛠️ Open-Source FinOps Projects](#️-open-source-finops-projects)
 - [💡 Architectural Best Practices](#-architectural-best-practices)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Buy Me A Coffee](#-support--buy-me-a-coffee)
 - [📜 Disclaimer](#-disclaimer)
+- [⭐ Star History](#-star-history)
 
 ---
 
@@ -99,11 +102,31 @@ Please ensure all added SaaS tools include verified pricing tiers, free trial de
 
 ---
 
+## 💖 Support & Buy Me A Coffee
+
+Thank you for exploring **Awesome-Multi-Tenant-Cost-Profiling-Allocation**! If you find this curated ecosystem list valuable:
+
+- ⭐ **Star** this repository to support its visibility!
+- 🍴 **Fork** and contribute new tools or updates!
+- 📢 **Share** it with your FinOps, DevOps, and Platform Engineering teams!
+
+If you'd like to support ongoing updates and maintenance, consider sponsoring:
+
+[![Sponsor on GitHub](https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=github)](https://github.com/sponsors/ishandutta2007)
+
+---
+
 ## 📜 Disclaimer
 
 - **Community Curated**: This list is curated by community contributors for educational & architectural evaluation purposes.
 - **Data Accuracy**: Pricing and company valuations fluctuate; figures are based on published pricing pages and public funding data as of October 2026.
 - **Security & Compliance**: Ensure self-hosted cost profiling infrastructure enforces proper RBAC, network policies, and credential security.
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Multi-Tenant-Cost-Profiling-Allocation&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Multi-Tenant-Cost-Profiling-Allocation&type=date&legend=top-left)
 
 ---
 
