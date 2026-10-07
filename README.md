@@ -1,187 +1,112 @@
-# Awesome-Multi-Tenant-Cost-Profiling-Allocation
-
-## Top Multi-Tenant Cost Profiling & Allocation Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**
-
-*Focused on Kubernetes Cost Visibility, Cloud Spend Attribution & Self-Hosted FinOps Platforms*
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **commercial cost profiling platforms** and **open-source projects** that provide visibility into cloud spend and resource allocation across multi-tenant environments — particularly Kubernetes clusters where tenants share infrastructure. These tools enable accurate tenant billing, cost optimization, and FinOps practices.
-
-
-
-**Examples** include AWS Application Cost Profiler, CloudZero, Kubecost, Vantage, Cast AI, Anodot, Finout, Harness Cloud Cost Management, Yotascale, and Cloudability (the category leaders).
-
-
-
-**Open-source emphasis**: Multi-tenant cost profiling is a domain where open-source provides strong production-grade alternatives. **OpenCost** leads as the CNCF specification and reference implementation for Kubernetes cost monitoring, originally developed and open-sourced by Kubecost . **Kubecost** itself offers a free tier with multi-cluster visibility . **Remora-Fin** provides a high-performance AWS FinOps CLI with local-only data processing . **OpenFinOps** focuses on AI/ML cost observability . This section is heavily expanded.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[CloudZero](https://www.cloudzero.com/)**
-
-  **The leading cloud cost intelligence platform** — connects AWS, Azure, GCP, Oracle Cloud, and SaaS/AI platforms including Databricks, Datadog, Snowflake, Anthropic, and OpenAI . **Dimensions for cost allocation** by team, product, feature, environment, or customer — including shared and multi-tenant costs . **Unit Economics** tracks cost per customer, transaction, or any unit . **Kubernetes optimization capabilities** added November 2025 with usage metrics, efficiency scores, and unit economics dashboards . **AI-powered anomaly detection** with automatic ML-based alerts . **Best for enterprise cloud cost intelligence**.
-
-
-
-- **[Kubecost](https://www.kubecost.com/)**
-
-  **The commercial version of OpenCost** — enhanced with multi-cluster federation, ETL backup, and enterprise support . **Amazon EKS-optimized Kubecost bundle** available at no additional cost with unlimited core limits when integrated with Amazon Managed Service for Prometheus . **Kubecost v3** introduces unified agent eliminating Prometheus dependency, S3-compatible storage, and reduced memory usage . **Best for Kubernetes cost management at scale**.
-
-
-
-- **[AWS Application Cost Profiler](https://aws.amazon.com/application-cost-profiler/)**
-
-  **AWS's managed cost profiling service** — tracks AWS resource usage by tenant for multi-tenant SaaS applications . **Tenant-defined usage tracking** for EC2, Lambda, ECS, SQS, SNS, and DynamoDB . **Note**: Service is being discontinued September 30, 2024 and is no longer accepting new customers .
-
-
-
-- **[Vantage](https://www.vantage.sh/)**
-
-  **Cloud cost transparency platform** — multi-cloud cost visibility with Kubernetes support and unit economics.
-
-
-
-- **[Cast AI](https://cast.ai/)**
-
-  **Kubernetes cost optimization** — automated cost reduction with real-time visibility.
-
-
-
-- **[Finout](https://www.finout.io/)**
-
-  **Cloud cost management platform** — cost allocation and Kubernetes cost visibility.
-
-
-
-- **[Harness Cloud Cost Management](https://www.harness.io/)**
-
-  **Cloud cost management** — visibility, optimization, and governance.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Kubernetes Cost Monitoring
-
-
-
-- **[OpenCost](https://github.com/opencost/opencost)**
-
-  **The CNCF specification and reference implementation for Kubernetes cost monitoring**, Apache-2.0 licensed with **4,000+ GitHub stars** . **Real-time cost allocation by cluster, node, namespace, controller, service, or pod** . **Multi-cloud cost monitoring** for AWS, Azure, and GCP with dynamic on-demand pricing via billing API integrations . **Supports on-prem Kubernetes** with custom CSV pricing . **GPU, memory, and persistent volume allocation** . **MCP server** for AI agent access to cost data — disabled by default, opt-in via Helm chart . **Carbon costs** for cloud resources . **The de facto open-source Kubernetes cost monitoring tool** — originally developed and open-sourced by Kubecost . **Best for multi-tenant Kubernetes cost visibility**.
-
-
-
-- **[Kubecost Free](https://github.com/kubecost/cost-analyzer-helm-chart)**
-
-  **Free tier of Kubecost** — single-cluster view with unlimited clusters and up to 250 cores . **Amazon EKS-optimized bundle** provides unified multi-cluster visibility without core limits when integrated with Amazon Managed Service for Prometheus . **ETL backup options** for preserving billing data . **Alerts via email, Slack, and Microsoft Teams** . **Best for starting with Kubernetes cost visibility**.
-
-
-
-### Cloud FinOps Tools
-
-
-
-- **[Remora-Fin](https://pypi.org/project/remora-fin/)**
-
-  **High-performance AWS FinOps CLI with terminal UI**, open-source . **Privacy-first**: all data processing happens locally — never sends billing data to external servers . **Deep AWS service coverage**: EC2, Lambda, ECS, EKS, S3, EBS, RDS, DynamoDB, ElastiCache, Redshift, SageMaker, and more . **Efficiency & unit economics**: correlates cost with utilization metrics for right-sizing . **Interactive dashboard** with caching for responsive navigation . **Best for AWS-native FinOps with local data processing**.
-
-
-
-- **[OpenFinOps](https://pypi.org/project/openfinops/)**
-
-  **Open-source FinOps platform for AI/ML cost observability**, open-source . **LLM training cost tracking**: GPU utilization, training jobs, and compute expenses . **RAG pipeline monitoring**: vector databases, embeddings, and retrieval costs . **AI API usage tracking**: OpenAI, Anthropic, and custom endpoints . **Cost attribution** per-model, per-team, per-project . **Executive dashboards** for CFO, COO, and infrastructure leaders . **Best for AI/ML cost observability**.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **OpenCost UI** — Web interface for OpenCost 
-
-- **kubectl-cost** — CLI access to Kubernetes cost allocation metrics, Apache 2.0 licensed 
-
-- **OpenCost Plugins** — Extend OpenCost with external costs like Datadog 
-
-- **AWS Cost Explorer** — Native AWS cost analysis (free tier)
-
-- **AWS CUR (Cost and Usage Report)** — Detailed billing data for cost allocation 
-
-
-
-**Frameworks for building custom multi-tenant cost profiling solutions**: Combine **OpenCost** for Kubernetes cost allocation by namespace to track individual tenant usage . Use **Remora-Fin** for AWS-native FinOps with local-only data processing . Deploy **Kubecost** for multi-cluster visibility with ETL backup and enterprise features . Integrate **OpenFinOps** for AI/ML cost tracking . Note that true enterprise cost intelligence with unit economics, AI-powered optimization, and vendor-supported SLAs (CloudZero, Kubecost Enterprise) remains primarily commercial territory; open-source stacks provide strong cost allocation, namespace-level visibility, and FinOps foundations that require integration for complete multi-tenant cost management.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Multi-tenant cost profiling platforms handle sensitive billing and infrastructure data. Self-hosted solutions require proper security hardening, access controls, and compliance with data privacy regulations.
-
-- **Accuracy varies by resource type** — OpenCost and Kubecost provide 3-5% margin of error against cloud bills . Fargate cost tracking has lower accuracy than EC2 due to billing model differences .
-
-- **AWS Application Cost Profiler is being discontinued** September 30, 2024 — existing customers should migrate to alternative solutions .
-
-- **License considerations**: OpenCost uses Apache-2.0 , Remora-Fin is open-source with local-only processing , Kubecost Free has core limits for non-EKS users . Verify licensing against your use case before committing.
-
-- The open-source ecosystem provides strong cost allocation, namespace-level visibility, and FinOps foundations, but **unit economics, AI-powered optimization, and vendor-supported SLAs** remain primarily commercial offerings.
-
-
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Multi-Tenant-Cost-Profiling-Allocation/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Multi-Tenant-Cost-Profiling-Allocation?style=flat-square&logo=github&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Multi-Tenant-Cost-Profiling-Allocation/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Multi-Tenant-Cost-Profiling-Allocation?style=flat-square&color=blue" alt="License"/></a>
+  <img src="https://img.shields.io/badge/Last%20Updated-October%202026-brightgreen?style=flat-square" alt="Last Updated"/>
+</p>
+
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Multi-Tenant Cost Profiling & Allocation Banner" width="100%"/>
+</p>
+
+# 💰 Awesome Multi-Tenant Cost Profiling & Allocation 🚀
+
+> **A curated collection of top SaaS products, open-source FinOps tools, and cloud infrastructure platforms for Kubernetes multi-tenant cost tracking, spend attribution, unit economics, and automated cloud optimization.**
 
 ---
 
+## 📌 Executive Overview & SEO Index
 
+In modern cloud-native architectures, multi-tenant infrastructure (particularly shared **Kubernetes (K8s)** clusters, shared serverless workloads, microservices, and multi-tenant databases) makes cost attribution exceptionally difficult. **Multi-Tenant Cost Profiling & Allocation** solves this challenge by mapping granular cloud usage (CPU, RAM, GPU, storage, egress, network traffic) directly to business dimensions such as **tenants, customers, teams, products, environments, or namespaces**.
 
-**Made for platform engineers, FinOps practitioners, and organizations seeking multi-tenant cost visibility.**
+This repository provides an authoritative guide comparing **commercial SaaS FinOps platforms** and **production-ready Open-Source GitHub tools** to help platform engineers, DevOps leads, and FinOps practitioners achieve enterprise cloud transparency.
 
-Let's make multi-tenant cost profiling and allocation more open, transparent, and efficient.
+---
+
+## 🗺️ Table of Contents
+
+- [📊 SaaS Platforms Comparison](#-saas-platforms-comparison)
+- [🛠️ Open-Source FinOps Projects](#️-open-source-finops-projects)
+- [💡 Architectural Best Practices](#-architectural-best-practices)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [📜 Disclaimer](#-disclaimer)
+
+---
+
+## 📊 SaaS Platforms Comparison
+
+> 📊 **Sector Market Analysis**: The global Cloud FinOps and Multi-Tenant Cost Profiling market is estimated at **$18.4 Billion by 2026** (growing at a 22.4% CAGR from ~$8.3B in 2022). The sector is **moderately fragmented** with strong consolidation activity by enterprise tech giants (e.g., IBM acquiring Apptio/Cloudability & Kubecost), alongside hyper-specialized category leaders (Cast AI, CloudZero, Vantage, Finout) competing on real-time Kubernetes unit economics and automated savings.
+
+The table below summarizes leading commercial platforms, **sorted by Company Size / Valuation (Descending)**:
+
+| 🏢 Product Name | 📝 Description & Key Features | 💳 Pricing Tiers (Starting Price) | 🎁 Free Tier / Trial Limits | 📈 Company Size / Valuation |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Cloudability](https://www.apptio.com/products/cloudability/)** *(Apptio / IBM)* | 🏛️ Enterprise multi-cloud FinOps governance, cost allocation, and financial planning across AWS, Azure, GCP, and container clusters. | **$499/month** (Starter tier based on monitored cloud spend) | 🎁 **14-Day Free Trial** with full AWS/Azure/GCP cost allocation reporting | 🚀 **$4.6B Acquisition** *(by IBM; IBM $200B+ Market Cap)* |
+| **[Kubecost Enterprise](https://www.kubecost.com/)** *(IBM)* | ☸️ The commercial extension of OpenCost. Unified multi-cluster federation, ETL backup, Prometheus-less agent, and RBAC cost governance. | **$8.00/node/month** (or $499/mo Pro Tier) | 🎁 **Free-Forever Foundations Tier** (Unlimited clusters up to 250 cores, 15-day metric retention) | 🏢 **Acquired by IBM** *(IBM $200B+ Market Cap; $100M prior valuation)* |
+| **[Harness Cloud Cost Management](https://www.harness.io/products/cloud-cost-management)** | ⚡ End-to-end software delivery & cost management platform. Includes idle resource AutoStopping and container cost recommendations. | **$2.25/node/month** (or $25/month per 100 workloads) | 🎁 **Free-Forever Plan** (Up to $250k/year managed spend, 2 K8s clusters, 10 AutoStopping rules, 30-day retention) | 🦄 **$3.7B Valuation** *($425M total funding, $100M+ ARR)* |
+| **[Cast AI](https://cast.ai/)** | 🤖 Automated Kubernetes compute rightsizing, spot instance orchestration, GPU management, and real-time cost profiling. | **$0.005/node-hour** (or 25% of guaranteed cloud savings) | 🎁 **Free-Forever Read-Only Cluster Audit** & 14-day full auto-optimization trial | 🦄 **$1.0B+ Valuation** *(Unicorn status, $108M Series C funding)* |
+| **[CloudZero](https://www.cloudzero.com/)** | 🧠 Cloud cost intelligence platform. Maps code changes, Datadog, Snowflake, OpenAI, & AWS usage to tenant unit economics and telemetry. | **~1.9% of monitored spend** (min. $2,500/mo annualized subscription) | 🎁 **30-Day Proof-of-Concept (POC)** trial with full cost attribution audit | 💰 **$119M Total Funding** *(Series C, ~$25M EST. Revenue)* |
+| **[Finout](https://www.finout.io/)** | 📦 "MegaBill" platform unifying AWS, K8s, Datadog, Snowflake, & OpenAI into unified tenant unit economics without agent installation. | **$500/month** (Fixed annual tier billing based on spend range) | 🎁 **14-Day Free Trial** (Up to $50,000 monthly spend analysis) | 💰 **$85M Total Funding** *(Series C, ~$9.1M EST. Revenue)* |
+| **[Vantage](https://www.vantage.sh/)** | 👁️ Developer-centric cloud cost transparency platform with Autopilot savings, per-tenant K8s cost allocation, and custom dashboards. | **$30.00/month** (Pro Plan for up to $7,500 monthly spend) | 🎁 **Free Starter Plan** (Free forever up to $2,500 tracked monthly cloud spend) | 💵 **$50M–$100M Valuation** *($25M funding, ~$17.9M EST. Revenue)* |
+| **[Anodot](https://www.anodot.com/cloud-cost-management/)** *(Glassbox)* | 🔔 AI-driven cloud cost anomaly detection, automated tenant cost allocation, and unit metric telemetry. | **$350/month** (Base tier for real-time cost anomaly tracking) | 🎁 **14-Day Proof-of-Concept (POC)** pilot with up to $25,000 cloud spend | 🏢 **Acquired by Glassbox** *($65M+ funding, ~$13.8M EST. Revenue)* |
+
+---
+
+## 🛠️ Open-Source FinOps Projects
+
+> 🌟 **Community-Driven Cloud Transparency**: Open-source solutions provide robust production-grade foundations for Kubernetes cost allocation, infrastructure drift prevention, and cluster autoscaling.
+
+Below is the list of top open-source projects, **sorted by GitHub Star Count (Descending)**:
+
+| 📦 Repository & Link | ⭐ Star Count | 📝 Description & Ecosystem Role | 🛠️ Tech Stack |
+| :--- | :--- | :--- | :--- |
+| **[Infracost](https://github.com/infracost/infracost)** | [![GitHub stars](https://img.shields.io/github/stars/infracost/infracost?style=social&color=white)](https://github.com/infracost/infracost/stargazers) | 🏗️ **Cloud cost estimates for Terraform & IaC** in pull requests before deployment. Prevents unexpected cloud bill spikes. | `Go` `Terraform` |
+| **[OpenCost](https://github.com/opencost/opencost)** | [![GitHub stars](https://img.shields.io/github/stars/opencost/opencost?style=social&color=white)](https://github.com/opencost/opencost/stargazers) | ☸️ **CNCF specification & reference implementation** for Kubernetes cost allocation by cluster, namespace, pod, or custom tenant label. | `Go` `Prometheus` |
+| **[Cloud Custodian](https://github.com/cloud-custodian/cloud-custodian)** | [![GitHub stars](https://img.shields.io/github/stars/cloud-custodian/cloud-custodian?style=social&color=white)](https://github.com/cloud-custodian/cloud-custodian/stargazers) | 🛡️ **Rules engine for cloud security, governance & cost optimization**. Automates resource cleanup & off-hours shutdown. | `Python` `YAML` |
+| **[Komiser](https://github.com/mlabouardy/komiser)** | [![GitHub stars](https://img.shields.io/github/stars/mlabouardy/komiser?style=social&color=white)](https://github.com/mlabouardy/komiser/stargazers) | 🌐 **Cloud environment inspector & cost audit engine**. Unifies AWS, GCP, Azure, and DigitalOcean resource allocation. | `Go` `React` |
+| **[Goldilocks](https://github.com/FairwindsOps/goldilocks)** | [![GitHub stars](https://img.shields.io/github/stars/FairwindsOps/goldilocks?style=social&color=white)](https://github.com/FairwindsOps/goldilocks/stargazers) | 📏 **Kubernetes resource recommendation engine**. Identifies over-provisioned container requests & limits to optimize cluster efficiency. | `Go` `Kubernetes` |
+| **[Kube Capacity](https://github.com/robscott/kube-capacity)** | [![GitHub stars](https://img.shields.io/github/stars/robscott/kube-capacity?style=social&color=white)](https://github.com/robscott/kube-capacity/stargazers) | 📊 **CLI tool providing a simple overview of resource requests, limits, and utilization** across Kubernetes nodes & pods. | `Go` `CLI` |
+| **[AutoSpotting](https://github.com/LeanerCloud/AutoSpotting)** | [![GitHub stars](https://img.shields.io/github/stars/LeanerCloud/AutoSpotting?style=social&color=white)](https://github.com/LeanerCloud/AutoSpotting/stargazers) | ⚡ **Automates replacing AWS AutoScaling EC2 instances with spot instances** in existing deployment groups with minimal downtime. | `Go` `AWS` |
+| **[Karpenter](https://github.com/kubernetes-sigs/karpenter)** | [![GitHub stars](https://img.shields.io/github/stars/kubernetes-sigs/karpenter?style=social&color=white)](https://github.com/kubernetes-sigs/karpenter/stargazers) | 🚀 **Next-generation Kubernetes node autoscaler**. Rapidly provisions right-sized nodes to minimize idle compute spend. | `Go` `Kubernetes` |
+| **[kubectl-cost](https://github.com/kubecost/kubectl-cost)** | [![GitHub stars](https://img.shields.io/github/stars/kubecost/kubectl-cost?style=social&color=white)](https://github.com/kubecost/kubectl-cost/stargazers) | 💻 **kubectl plugin for real-time Kubernetes cost allocation metrics** directly from the terminal via OpenCost APIs. | `Go` `Kubernetes` |
+| **[Kubecost Helm Chart](https://github.com/kubecost/kubecost)** | [![GitHub stars](https://img.shields.io/github/stars/kubecost/kubecost?style=social&color=white)](https://github.com/kubecost/kubecost/stargazers) | 📦 **Deployment chart for Kubecost Free Tier**. Provides single-cluster visibility, alerts, and cost optimization dashboards. | `Helm` `Kubernetes` |
+| **[Kube Downscaler](https://github.com/hjacobs/kube-downscaler)** | [![GitHub stars](https://img.shields.io/github/stars/hjacobs/kube-downscaler?style=social&color=white)](https://github.com/hjacobs/kube-downscaler/stargazers) | 🌙 **Automatically scales down Kubernetes deployments & statefulsets** during non-working hours to reduce dev/staging cloud costs. | `Python` `Kubernetes` |
+
+---
+
+## 💡 Architectural Best Practices
+
+When building custom multi-tenant cost profiling and allocation engines, consider the following blueprint:
+
+1. **Namespace & Label Tagging Standard**: Enforce strict Kubernetes metadata annotations (`tenant`, `environment`, `team`, `cost-center`).
+2. **OpenCost Core Engine**: Deploy [OpenCost](https://github.com/opencost/opencost) into your Kubernetes control plane for node, pod, and PVC cost allocation.
+3. **Cloud Provider Billing Ingestion**: Correlate OpenCost telemetry with AWS CUR (Cost & Usage Reports), GCP Billing Export, or Azure Cost Management APIs.
+4. **Unit Economics Telemetry**: Combine total tenant monthly cloud spend with business metrics (e.g., active daily users, API requests, database transactions) to calculate cost per customer.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are warmly welcomed! 
+
+1. **Fork the repository** 🍴
+2. Create your feature branch (`git checkout -b feature/new-finops-tool`)
+3. Commit your changes with clear descriptions 📝
+4. Open a **Pull Request** 🚀
+
+Please ensure all added SaaS tools include verified pricing tiers, free trial details, and company sizing, while open-source additions include star badges linked to stargazers.
+
+---
+
+## 📜 Disclaimer
+
+- **Community Curated**: This list is curated by community contributors for educational & architectural evaluation purposes.
+- **Data Accuracy**: Pricing and company valuations fluctuate; figures are based on published pricing pages and public funding data as of October 2026.
+- **Security & Compliance**: Ensure self-hosted cost profiling infrastructure enforces proper RBAC, network policies, and credential security.
+
+---
+
+<p align="center">
+  <b>Made with ❤️ for Platform Engineers, FinOps Practitioners & Cloud Architects worldwide.</b>
+</p>
